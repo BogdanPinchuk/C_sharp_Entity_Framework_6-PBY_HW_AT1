@@ -28,6 +28,9 @@ namespace LesApp0
         /// <param name="e"></param>
         private void Bt_Click(object sender, EventArgs e)
         {
+            // перетираємо таблицю
+            Database.SetInitializer(new DropCreateDatabaseAlways<MyContext>());
+
             using (MyContext db = new MyContext())
             {
                 // створюємо об'єкти

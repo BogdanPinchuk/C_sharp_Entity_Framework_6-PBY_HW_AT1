@@ -12,6 +12,6 @@ namespace LesApp0
         public MyContext()
             :base("DbConncection") { }
 
-        public DbSet<Model> Models { get; set; }
+        public virtual DbSet<Model> Models { get; set; }
     }
 }
