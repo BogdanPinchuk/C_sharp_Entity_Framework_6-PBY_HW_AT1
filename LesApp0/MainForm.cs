@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,6 +20,9 @@ namespace LesApp0
         public MainForm()
         {
             InitializeComponent();
+
+            AppDomain.CurrentDomain.SetData("DataDirectory",
+                Path.GetDirectoryName(Application.ExecutablePath));
         }
 
         /// <summary>
